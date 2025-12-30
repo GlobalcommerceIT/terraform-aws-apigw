@@ -415,3 +415,10 @@ variable "log_group_kms_key" {
   type        = string
   default     = null
 }
+
+### FIX
+variable "openapi_file_path" {
+  type    = string
+  default = null
+}
+
