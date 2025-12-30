@@ -422,3 +422,19 @@ variable "openapi_file_path" {
   default = null
 }
 
+variable "openapi_template_path" {
+  description = "Path al OpenAPI template"
+  type        = string
+}
+
+variable "openapi_template_vars" {
+  description = "Variables para el OpenAPI template"
+  type        = map(string)
+  default     = {}
+}
+
+# Backward compatibility (opcional)
+variable "openapi_definition" {
+  type    = string
+  default = null
+}
