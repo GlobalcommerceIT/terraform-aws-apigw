@@ -434,7 +434,3 @@ variable "openapi_template_vars" {
 }
 
 # Backward compatibility (opcional)
-variable "openapi_definition" {
-  type    = string
-  default = null
-}
