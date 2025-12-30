@@ -425,6 +425,7 @@ variable "openapi_file_path" {
 variable "openapi_template_path" {
   description = "Path al OpenAPI template"
   type        = string
+  default = null
 }
 
 variable "openapi_template_vars" {
@@ -438,3 +439,9 @@ variable "openapi_definition" {
   type    = string
   default = null
 }
+
+variable "openapi_template" {
+  type = string
+  default = null
+}
+
