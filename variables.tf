@@ -17,10 +17,10 @@ variable "description" {
   default     = null
 }
 
-variable "openapi_definition" {
-  description = "(Required) YAML formatted definition file using OpenAPI 3.x specification. This definition contains all API configuration inputs. Any inputs used in Terraform will override inputs in the definition."
-  type        = string
-}
+# variable "openapi_definition" {
+#   description = "(Required) YAML formatted definition file using OpenAPI 3.x specification. This definition contains all API configuration inputs. Any inputs used in Terraform will override inputs in the definition."
+#   type        = string
+# }
 
 variable "put_rest_api_mode" {
   description = "(Optional) Mode of the PutRestApi operation when importing an OpenAPI specification via the body argument (create or update operation). Valid values are merge and overwrite. If unspecificed, defaults to overwrite (for backwards compatibility). This corresponds to the x-amazon-apigateway-put-integration-method extension. If the argument value is provided and is different than the OpenAPI value, the argument value will override the OpenAPI value."
@@ -434,3 +434,7 @@ variable "openapi_template_vars" {
 }
 
 # Backward compatibility (opcional)
+variable "openapi_definition" {
+  type    = string
+  default = null
+}
