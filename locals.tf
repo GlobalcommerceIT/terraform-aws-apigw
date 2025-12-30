@@ -1,6 +1,6 @@
 locals {
-  openapi_body = template(
-    var.openapi_template,
+  openapi_body = templatefile(
+    "${path.module}/openapi-generated.yaml",
     var.openapi_template_vars
   )
 }
